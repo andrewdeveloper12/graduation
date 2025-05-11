@@ -6,8 +6,11 @@ import path from 'path';
 // Detect Railway's default port or fallback to 5173
 const PORT = process.env.PORT || 5173;
 
+// هنا ضع اسم الريبو الخاص بك على GitHub
+const REPO_NAME = 'graduation';
+
 export default defineConfig({
-  base: './', // Change to '/' if you want to serve from the root
+  base: `/${REPO_NAME}/`, // ضروري للنشر على GitHub Pages
   plugins: [react(), tsconfigPaths()],
   resolve: {
     alias: {
